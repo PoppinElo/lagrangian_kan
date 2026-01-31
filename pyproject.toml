@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lagrangian-kan"
+version = "0.1.0"
+description = "Framework para aprendizaje y descubrimiento de Lagrangianos usando KAN. Ejemplo de aplicación de mini_kan."
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "torch>=2.0.0",
+    "numpy>=1.20.0",
+    "scipy>=1.7.0",
+    "matplotlib>=3.5.0",
+    "mini-kan>=0.1.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
+    "jupyter>=1.0.0",
+    "ipykernel>=6.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/PoppinElo/lagrangian_kan"
+Repository = "https://github.com/PoppinElo/lagrangian_kan"
+Documentation = "https://github.com/PoppinElo/lagrangian_kan#readme"
+"Related Project" = "https://github.com/PoppinElo/mini_kan"
