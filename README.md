@@ -144,6 +144,23 @@ El modelo KAN también puede aprender sistemas no lineales como el péndulo simp
 
 Estos resultados demuestran que los modelos KAN pueden aprender eficientemente las dinámicas Lagrangianas desde datos de trayectorias, superando o igualando el rendimiento de MLPs tradicionales mientras proporcionan mayor interpretabilidad.
 
+### Nota sobre Complejidad
+
+Los ejemplos mostrados (oscilador armónico y péndulo simple) son casos relativamente simples con baja dimensionalidad y comportamiento bien caracterizado. Para sistemas más complejos con:
+
+- **Mayor no-linealidad**: Sistemas con dinámicas altamente no lineales o caóticas
+- **Mayor dimensionalidad**: Sistemas con múltiples grados de libertad acoplados
+- **Restricciones complejas**: Sistemas con restricciones holonómicas o no-holonómicas
+
+se requiere una **mayor calibración** en varios aspectos:
+
+1. **Diseño de la red**: Selección cuidadosa de la arquitectura KAN (número de capas, nodos por capa, funciones base)
+2. **Regularizadores**: Ajuste fino de los pesos de los regularizadores (masa, interacciones, aceleración)
+3. **Generación de datos**: Estrategias más sofisticadas para cubrir el espacio de fases de manera adecuada
+4. **Hiperparámetros de entrenamiento**: Tasa de aprendizaje, esquemas de regularización, y estrategias de optimización
+
+El framework proporciona las herramientas necesarias, pero la aplicación exitosa a problemas más complejos requiere experiencia y experimentación con estos aspectos.
+
 ## Relación con mini_kan
 
 Este proyecto demuestra cómo usar [mini_kan](https://github.com/PoppinElo/mini_kan) para resolver problemas físicos complejos. `lagrangian_kan` utiliza los componentes de `mini_kan` (KAN, KANLayer, bases) para aprender Lagrangianos desde datos de trayectorias.
