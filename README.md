@@ -100,7 +100,49 @@ Los notebooks de ejemplo están disponibles en el repositorio principal:
 - `HarmonicOscillator.ipynb`: Ejemplo completo con oscilador armónico
 - `SimplePendulum.ipynb`: Ejemplo con péndulo simple
 
-Las visualizaciones generadas en estos notebooks están disponibles en `docs/images/`.
+## Resultados y Visualizaciones
+
+A continuación se muestran ejemplos visuales de las capacidades del modelo KAN para aprender Lagrangianos:
+
+### Oscilador Armónico
+
+El modelo KAN aprende exitosamente el Lagrangiano del oscilador armónico y reproduce correctamente las trayectorias físicas.
+
+**Datos generados y distribución:**
+![Datos generados](docs/images/HarmonicOscillator_cell11_output1.png)
+
+**Métricas de entrenamiento:**
+![Métricas de entrenamiento](docs/images/HarmonicOscillator_cell12_output0.png)
+
+**Comparación MLP vs KAN:**
+![Comparación de modelos](docs/images/HarmonicOscillator_cell13_output1.png)
+
+**Diagramas de fase:**
+![Diagramas de fase](docs/images/HarmonicOscillator_cell14_output1.png)
+
+**Trayectorias integradas:**
+![Trayectorias integradas](docs/images/HarmonicOscillator_cell15_output1.png)
+
+### Péndulo Simple
+
+El modelo KAN también puede aprender sistemas no lineales como el péndulo simple, respetando las restricciones energéticas del sistema.
+
+**Datos generados y distribución:**
+![Datos generados](docs/images/SimplePendulum_cell11_output1.png)
+
+**Métricas de entrenamiento:**
+![Métricas de entrenamiento](docs/images/SimplePendulum_cell12_output0.png)
+
+**Comparación MLP vs KAN:**
+![Comparación de modelos](docs/images/SimplePendulum_cell13_output1.png)
+
+**Diagramas de fase:**
+![Diagramas de fase](docs/images/SimplePendulum_cell14_output1.png)
+
+**Trayectorias integradas:**
+![Trayectorias integradas](docs/images/SimplePendulum_cell15_output1.png)
+
+Estos resultados demuestran que los modelos KAN pueden aprender eficientemente las dinámicas Lagrangianas desde datos de trayectorias, superando o igualando el rendimiento de MLPs tradicionales mientras proporcionan mayor interpretabilidad.
 
 ## Relación con mini_kan
 
